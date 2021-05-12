@@ -14,12 +14,12 @@
  * }
  */
 class FindElements {
-    List<Integer> list = new ArrayList<>();
+    PriorityQueue<Integer> pq = new PriorityQueue<>();
     private void util(TreeNode root,int val){
         if(root==null)
             return;
         root.val = val;
-        list.add(root.val);
+        pq.add(root.val);
         util(root.left,2*root.val+1);
         util(root.right,2*root.val+2);
     }
@@ -29,7 +29,7 @@ class FindElements {
     }
     
     public boolean find(int target) {
-        return list.contains(target);
+        return pq.contains(target);
     }
 }
 
