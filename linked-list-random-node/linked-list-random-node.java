@@ -8,6 +8,16 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
 class Solution {
 
     /** @param head The linked list's head.
@@ -32,6 +42,11 @@ class Solution {
     }
 }
 
+/**
+ * Your Solution object will be instantiated and called as such:
+ * Solution obj = new Solution(head);
+ * int param_1 = obj.getRandom();
+ */
 /**
  * Your Solution object will be instantiated and called as such:
  * Solution obj = new Solution(head);
