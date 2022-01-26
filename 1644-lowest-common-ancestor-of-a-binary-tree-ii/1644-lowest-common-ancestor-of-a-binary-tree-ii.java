@@ -30,12 +30,18 @@ class Solution {
         if(root == null)
             return null;
         
-        if(root == p || root == q){
+        TreeNode left = lca(root.left, p, q);
+        TreeNode right = lca(root.right, p, q);
+        
+        if(root == p){
+            this.pFound = true;
             return root;
         }
         
-        TreeNode left = lca(root.left, p, q);
-        TreeNode right = lca(root.right, p, q);
+        if(root == q){
+            this.qFound = true;
+            return root;
+        }
         
         if(left == null && right != null)
             return right;
@@ -54,7 +60,7 @@ class Solution {
         this.pFound = false;
         this.qFound = false;
         
-        inorder(root, p, q);
+        //inorder(root, p, q);
         
         TreeNode res = lca(root, p, q);
         
